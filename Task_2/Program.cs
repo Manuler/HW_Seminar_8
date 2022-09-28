@@ -42,6 +42,7 @@ namespace Task_2
                 int maxSum = 0;
                 int tempSum = 0;
                 string temp = string.Empty;
+                string rowNum = string.Empty;
 
                 for (int i = 0; i < array.GetLength(0); i++) //находим максимальную сумму элементов по строкам в двумерном массиве
                 {
@@ -68,11 +69,13 @@ namespace Task_2
                     {
                         maxSum = tempSum;
                         result = temp;
+                        rowNum = Convert.ToString(i);
                     }
                     temp = string.Empty;
                     tempSum = 0;
                 }
-                return result;
+                return result + "Номер строки с наименьшей суммой элементов: " + rowNum; 
+                
             }
 
             
